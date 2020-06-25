@@ -5,7 +5,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    this.$store.dispatch("getUserData", {});
+  }
+};
 </script>
 
 <style lang="scss" scoped>
