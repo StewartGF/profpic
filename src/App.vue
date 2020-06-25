@@ -1,17 +1,13 @@
 <template>
   <div class="box-border h-screen">
-    <Landing />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Landing from "./components/Landing.vue";
-
 export default {
   name: "App",
-  components: {
-    Landing
-  }
+  components: {}
 };
 </script>
 
@@ -25,8 +21,6 @@ export default {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* Remueve el fondo azul cuando clickeas algo en la pagina  https://stackoverflow.com/a/45050338/12533883*/
   box-sizing: border-box;
-}
-html {
 }
 body {
   transition: background 0.25s ease-in-out;
