@@ -1,17 +1,13 @@
 <template>
-  <div id="app">
-    <Landing />
+  <div class="box-border h-screen">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Landing from "./components/Landing.vue";
-
 export default {
   name: "App",
-  components: {
-    Landing
-  }
+  components: {}
 };
 </script>
 
@@ -24,20 +20,15 @@ export default {
   /* Remueve el fondo azul cuando clickeas algo en la pagina  https://stackoverflow.com/a/45050338/12533883*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* Remueve el fondo azul cuando clickeas algo en la pagina  https://stackoverflow.com/a/45050338/12533883*/
+  box-sizing: border-box;
 }
-html,
 body {
   transition: background 0.25s ease-in-out;
-  height: 100%;
+  font-size: 14px;
+  background-color: #2a2442;
+  color: white;
 }
 #app {
-  /* esto soluciona el problema con los dobles scrollbar y que nada quepa dentro del 100% body y html */
-  max-height: 100%;
-  /* esto soluciona el problema con los dobles scrollbar y que nada quepa dentro del 100% body y html */
-  min-width: 100%;
-  position: relative;
-}
-div {
-  height: 100%;
+  height: 100vh;
 }
 </style>

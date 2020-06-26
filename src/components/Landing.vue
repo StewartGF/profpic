@@ -1,11 +1,39 @@
 <template>
-  <div class="landing-container">
-    <div class="menu-context">
-      <h1>este div a la izq</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus atque dignissimos corporis sapiente labore? Facilis magni provident, porro sed maiores commodi eveniet quas iste, eum, ea nostrum ab impedit.
-    </div>
-    <div class="profile-img">
-      <h1>este div a la derecha</h1>
-      <img src="../assets/profile.svg" />
+  <div class="container mx-auto text-center h-screen align-middle p-8">
+    <h1 class="text-3xl text-center">Selecciona la plataforma</h1>
+    <div class="container mx-auto text-center relative">
+      <div
+        class="grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 absolute"
+      >
+        <router-link to="/instagram">
+          <div
+            class="lg:max-w-full rounded-lg overflow-hidden shadow-xl card-color border-solid border-4 border-gray-light-600 hover:border-pink-500"
+          >
+            <img
+              class="w-full"
+              src="https://parentesis.com/imagesPosts/IG-glyph_001.png"
+              alt="Sunset in the mountains"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2 text-center">Instagram</div>
+            </div>
+          </div>
+        </router-link>
+        <router-link to="/tumblr">
+          <div
+            class="lg:max-w-full rounded-lg overflow-hidden shadow-xl card-color border-solid border-4 border-gray-light-600 hover:border-purple-500"
+          >
+            <img
+              class="w-full"
+              src="https://www.trecebits.com/wp-content/uploads/2018/11/Logo-Tumblr-fondo-azul.jpg"
+              alt="Sunset in the mountains"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2 text-center">Tumblr</div>
+            </div>
+          </div>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -15,35 +43,8 @@ export default {};
 </script>
 
 <style lang="css" scoped>
-.landing-container {
-  height: 100%;
-  background-image: linear-gradient(
-    to top,
-    #0c3483 0%,
-    #a2b6df 100%,
-    #6b8cce 100%,
-    #a2b6df 100%
-  );
-  text-align: center;
-  position: relative;
-  display: flex;
-}
-.profile-img {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  justify-content: center;
-  border: 1px solid red;
-}
-.profile-img img {
-  height: 50%;
-  width: 50%;
-}
-.menu-context {
-  position: absolute;
-  width: 50%;
-  height: 100%;
+.card-color {
+  color: white;
+  background-color: #2a2442;
 }
 </style>

@@ -1,5 +1,4 @@
 export default {
-  currentPicture: "",
-  currentUser: "",
-  currentSocialMedia: "",
+  instagramUserData: "",
+  tumblrUserData: "",
 };
