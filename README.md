@@ -18,3 +18,19 @@ Hice este proyecto para poder conseguir iconos desde las plataformas que más us
 
 - Instagram API
 - Tumblr API
+
+# TODO
+
+✅ Agregar estructura Vuex
+
+✅ Agregar Router
+
+✅ Consumir APIs necesarias
+
+✅ Actualizar Readme
+
+⬜️ Crear vista de Tumblr
+
+⬜️ Crear estado de Loading
+
+⬜️ Deploy en Netlify :D
