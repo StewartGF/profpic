@@ -1,24 +1,20 @@
-# profpic
+![npm](https://img.shields.io/badge/VueJS-v2.6.11-brightgreen) ![npm](https://img.shields.io/badge/Vuex-v3.2.0-green) ![npm](https://img.shields.io/badge/VueRouter-v3.3.4-yellowgreen) ![npm](https://img.shields.io/badge/TailwindCSS-v1.4.6-19B6BA) ![npm](https://img.shields.io/badge/InstagramAPI-v1-ff69b4) ![npm](https://img.shields.io/badge/TumblrAPI-v2-001935)
 
-## Project setup
-```
-npm install
-```
+# Profpic🖼
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Hice este proyecto para poder conseguir iconos desde las plataformas que más uso, no me gustan las páginas que lo hacen actualmente por lo que quiero crear una que me haga el trámite más rapido. Además, aproveché de conocer qué es TailwindCSS y qué ventajas tiene.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Tecnologías utilizadas
 
-### Lints and fixes files
-```
-npm run lint
-```
+- Vue.js
+- Vuex
+- Vue Router
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Framework CSS
+
+- Tailwind para no tener que escribir CSS... 🤷‍♂️
+
+## APIs consumidas
+
+- Instagram API
+- Tumblr API
