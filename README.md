@@ -29,8 +29,20 @@ Hice este proyecto para poder conseguir iconos desde las plataformas que más us
 
 ✅ Actualizar Readme
 
+✅ Crear estado de Loading
+
+✅ Agregar botón para volver
+
+✅ Cambiar colores de la página y tamaños en responsive
+
+✅ Validar el estado cuando el usuario no existe y el estado cuando se entra por primera vez
+
+✅ Agregar botón para descargar (como es una imagen externa a mi, no podré descargarla directamente, así que abriré una nueva página con el link a la imágen del usuario)
+
+⬜️ ¿Mover el resultado a un componente diferente? maybe........
+
 ⬜️ Crear vista de Tumblr
 
-⬜️ Crear estado de Loading
+⬜️ Arreglar el style del sitio porque se ve super 💩
 
 ⬜️ Deploy en Netlify :D

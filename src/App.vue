@@ -25,8 +25,7 @@ export default {
 body {
   transition: background 0.25s ease-in-out;
   font-size: 14px;
-  background-color: #2a2442;
-  color: white;
+  background-color: #15202b;
 }
 #app {
   height: 100vh;
