@@ -1,38 +1,87 @@
 <template>
-  <div class="container mx-auto text-center h-screen align-middle p-8">
-    <div class="fixed pt-16">
-      <router-link to="/">Inicio</router-link>
-    </div>
-    <h1 class="text-4xl">Instagram</h1>
-    <div class="flex items-center justify-between">
+  <div
+    class="container relative mx-auto text-center h-screen align-middle px-8 pb-8 pt-4 text-white"
+  >
+    <router-link
+      to="/"
+      class="shadow bg-blue-500 py-1 m-2 px-2 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold rounded-full top-0 left-0 absolute"
+    >Inicio</router-link>
+    <h1 class="text-5xl font-black">Instagram</h1>
+    <div class="flex items-center justify-between my-8">
       <input
-        class="appearance-none py-5 my-10 mx-1 block w-3/4 bg-purple-100 text-gray-900 border border-red-500 rounded px-4 focus:outline-none"
+        class="appearance-none rounded-full w-full py-5 px-4 mx-1 block w-3/4 bg-blue-900 bg-opacity-50 text-white-900 focus:outline-none focus:shadow-outline"
         id="username"
         type="search"
         placeholder="Nombre de usuario"
         v-model="username"
         @keyup.enter="loadData"
+        @blur="loadData"
       />
-      <button
-        class="shadow bg-purple-500 py-5 mx-1 w-1/4 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+      <!-- <button
+        class="shadow bg-blue-500 py-5 mx-1 w-1/4 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
         type="button"
         @click="loadData"
-      >Buscar</button>
+      >Buscar</button>-->
     </div>
-    <div v-if="this.infoFlag" class="container">
-      <div v-if="userData">
-        <div class="content-center">
-          <img :src="userData.user.profile_pic_url_hd" alt class="object-cover m-auto rounded-lg" />
+    <div v-if="isLoading" class="container mt-16">
+      <loading-spinner />
+    </div>
+    <div v-else class="container mt-5">
+      <div v-if="doesNotExists == 1">
+        <div v-if="instagramUserData">
+          <div
+            class="content-center grid gap-1 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
+          >
+            <img
+              :src="instagramUserData.user.profile_pic_url_hd"
+              class="object-cover m-auto rounded-lg"
+            />
+            <div class="container sm:text-center lg:text-left">
+              <p
+                class="text-blue-600 text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl"
+              >{{instagramUserData.user.username}}</p>
+              <p
+                class="text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg"
+              >{{instagramUserData.user.full_name}}</p>
+              <p
+                class="text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg"
+              >{{instagramUserData.user.biography}}</p>
+              <button
+                class="shadow bg-blue-500 rounded-full py-5 mt-5 w-2/4 sm:w-2/4 md:w-2/4 lg:w-2/4 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold"
+                type="button"
+                @click="clickAtag"
+              >
+                <a
+                  name="download"
+                  :href="instagramUserData.user.profile_pic_url_hd"
+                  download="imagen.jpg"
+                >Descargar</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-else-if="doesNotExists == 2">
+        <div class="container">
+          <p
+            class="text-l font-hairline"
+          >Probablemente ese nombre de usuario no exista, prueba con otro</p>
+          <p class="text-6xl">🤷‍♂️</p>
         </div>
       </div>
       <div v-else>
-        <h1>Probablemente ese nombre de usuario no exista 🙅‍♂️, prueba con otro🤷‍♂️</h1>
+        <div class="container">
+          <p class="text-3xl">hey🧐</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+import LoadingSpinner from "./LoadingSpinner.vue";
+
 export default {
   data: function() {
     return {
@@ -41,14 +90,22 @@ export default {
     };
   },
   computed: {
-    userData() {
-      return this.$store.state.instagramUserData;
-    }
+    ...mapState(["instagramUserData", "isLoading", "doesNotExists"]) // esto es más rapido que crear una función que devuelva el state en un return, don't know why tho🤷‍♂️
+  },
+  components: {
+    LoadingSpinner
   },
   methods: {
     loadData: function() {
-      this.$store.dispatch("getInstagramUserData", this.username);
-      this.infoFlag = true;
+      if (this.username !== "") {
+        this.$store.dispatch("getInstagramUserData", this.username);
+        this.username = "";
+      } else {
+        return false;
+      }
+    },
+    clickAtag: function() {
+      document.querySelector("a[name='download']").click();
     }
   }
 };

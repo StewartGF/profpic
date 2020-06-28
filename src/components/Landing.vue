@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto text-center h-screen align-middle p-8">
+  <div class="container mx-auto text-center text-white h-screen align-middle p-8">
     <h1 class="text-3xl text-center">Selecciona la plataforma</h1>
     <div class="container mx-auto text-center relative">
       <div
