@@ -1,38 +1,52 @@
 <template>
-  <div class="container mx-auto text-center text-white h-screen align-middle p-8">
-    <h1 class="text-3xl text-center">Selecciona la plataforma</h1>
+  <div
+    class="container mx-auto relative text-center text-white h-screen align-middle px-8 pb-8 pt-2"
+  >
+    <a href="https://github.com/StewartGF" target="_blank">
+      <img
+        width="30"
+        height="30"
+        src="https://image.flaticon.com/icons/svg/2111/2111612.svg"
+        style="filter: invert(100%);"
+        class="fixed top-0 left-0 origin-center transform -rotate-45 m-3"
+      />
+    </a>
+    <a href="https://www.linkedin.com/in/stewart-granger-flores/" target="_blank">
+      <img
+        width="24"
+        height="24"
+        src="https://image.flaticon.com/icons/svg/1384/1384088.svg"
+        style="filter: invert(100%);"
+        class="fixed top-0 right-0 origin-center transform rotate-45 m-4"
+      />
+    </a>
+    <h1 class="text-center mt-8 text-5xl font-black">Selecciona la plataforma</h1>
     <div class="container mx-auto text-center relative">
-      <div
-        class="grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 absolute"
-      >
-        <router-link to="/instagram">
-          <div
-            class="lg:max-w-full rounded-lg overflow-hidden shadow-xl card-color border-solid border-4 border-gray-light-600 hover:border-pink-500"
-          >
-            <img
-              class="w-full"
-              src="https://parentesis.com/imagesPosts/IG-glyph_001.png"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2 text-center">Instagram</div>
+      <div class="relative w-full">
+        <div
+          class="grid gap-4 h-full grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 relative"
+        >
+          <router-link to="/instagram">
+            <div
+              class="w-9/12 m-auto mt-12 rounded overflow-hidden shadow-xl bg-gray-900 border-solid border-4 border-gray-light-600 hover:border-pink-500"
+            >
+              <img src="https://parentesis.com/imagesPosts/IG-glyph_001.png" />
+              <div>
+                <h1 class="font-black text-lg p-3">instagram</h1>
+              </div>
             </div>
-          </div>
-        </router-link>
-        <router-link to="/tumblr">
-          <div
-            class="lg:max-w-full rounded-lg overflow-hidden shadow-xl card-color border-solid border-4 border-gray-light-600 hover:border-purple-500"
-          >
-            <img
-              class="w-full"
-              src="https://www.trecebits.com/wp-content/uploads/2018/11/Logo-Tumblr-fondo-azul.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2 text-center">Tumblr</div>
+          </router-link>
+          <router-link to="/tumblr">
+            <div
+              class="w-9/12 m-auto mt-12 rounded overflow-hidden shadow-xl bg-gray-900 border-solid border-4 border-gray-light-600 hover:border-purple-500"
+            >
+              <img
+                src="https://www.trecebits.com/wp-content/uploads/2018/11/Logo-Tumblr-fondo-azul.jpg"
+              />
+              <h1 class="font-black text-lg p-3">tumblr</h1>
             </div>
-          </div>
-        </router-link>
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -43,8 +57,4 @@ export default {};
 </script>
 
 <style lang="css" scoped>
-.card-color {
-  color: white;
-  background-color: #2a2442;
-}
 </style>
