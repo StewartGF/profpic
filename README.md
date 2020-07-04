@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/badge/VueJS-v2.6.11-brightgreen) ![npm](https://img.shields.io/badge/Vuex-v3.2.0-green) ![npm](https://img.shields.io/badge/VueRouter-v3.3.4-yellowgreen) ![npm](https://img.shields.io/badge/TailwindCSS-v1.4.6-19B6BA) ![npm](https://img.shields.io/badge/InstagramAPI-v1-ff69b4) ![npm](https://img.shields.io/badge/TumblrAPI-v2-001935)
+![npm](https://img.shields.io/badge/VueJS-v2.6.11-brightgreen) ![npm](https://img.shields.io/badge/Vuex-v3.2.0-green) ![npm](https://img.shields.io/badge/VueRouter-v3.3.4-yellowgreen) ![npm](https://img.shields.io/badge/TailwindCSS-v1.4.6-19B6BA) ![npm](https://img.shields.io/badge/InstagramAPI-v1-ff69b4) ![npm](https://img.shields.io/badge/TumblrAPI-v2-001935) [![Netlify Status](https://api.netlify.com/api/v1/badges/81f4472a-f65e-440f-a922-1073579cbd45/deploy-status)](https://app.netlify.com/sites/profpic-stewartgf/deploys)
 
 # Profpic🖼
 
