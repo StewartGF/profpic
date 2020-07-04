@@ -4,6 +4,10 @@
 
 Hice este proyecto para poder conseguir iconos desde las plataformas que más uso, no me gustan las páginas que lo hacen actualmente por lo que quiero crear una que me haga el trámite más rapido. Además, aproveché de conocer qué es TailwindCSS y qué ventajas tiene.
 
+# Deployed 🌐
+
+👉 https://profpic-stewartgf.netlify.app/
+
 ## Tecnologías utilizadas
 
 - Vue.js
@@ -39,10 +43,6 @@ Hice este proyecto para poder conseguir iconos desde las plataformas que más us
 
 ✅ Agregar botón para descargar (como es una imagen externa a mi, no podré descargarla directamente, así que abriré una nueva página con el link a la imágen del usuario)
 
-⬜️ ¿Mover el resultado a un componente diferente? maybe........
+✅ Crear Tumblr state y vista
 
-⬜️ Crear vista de Tumblr
-
-⬜️ Arreglar el style del sitio porque se ve super 💩
-
-⬜️ Deploy en Netlify :D
+✅ Deploy en Netlify :D

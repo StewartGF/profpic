@@ -6,6 +6,25 @@
       to="/"
       class="shadow bg-blue-500 py-1 m-2 px-2 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold rounded-full top-0 left-0 absolute"
     >Inicio</router-link>
+    <a href="https://github.com/StewartGF" target="_blank">
+      <img
+        width="30"
+        height="30"
+        src="https://image.flaticon.com/icons/svg/2111/2111612.svg"
+        style="filter: invert(100%);"
+        class="fixed bottom-0 left-0 m-5"
+      />
+    </a>
+    <a href="https://www.linkedin.com/in/stewart-granger-flores/" target="_blank">
+      <img
+        width="24"
+        height="24"
+        src="https://image.flaticon.com/icons/svg/1384/1384088.svg"
+        style="filter: invert(100%);"
+        class="fixed bottom-0 right-0 m-6"
+      />
+    </a>
+
     <h1 class="text-5xl font-black">Instagram</h1>
     <div class="flex items-center justify-between my-8">
       <input
@@ -54,6 +73,7 @@
                 <a
                   name="download"
                   :href="instagramUserData.user.profile_pic_url_hd"
+                  target="_blank"
                   download="imagen.jpg"
                 >Descargar</a>
               </button>
