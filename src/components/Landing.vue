@@ -8,7 +8,7 @@
         height="30"
         src="https://image.flaticon.com/icons/svg/2111/2111612.svg"
         style="filter: invert(100%);"
-        class="fixed top-0 left-0 origin-center transform -rotate-45 m-3"
+        class="fixed top-0 left-0 m-5"
       />
     </a>
     <a href="https://www.linkedin.com/in/stewart-granger-flores/" target="_blank">
@@ -17,7 +17,7 @@
         height="24"
         src="https://image.flaticon.com/icons/svg/1384/1384088.svg"
         style="filter: invert(100%);"
-        class="fixed top-0 right-0 origin-center transform rotate-45 m-4"
+        class="fixed top-0 right-0 m-6"
       />
     </a>
     <h1 class="text-center mt-8 text-5xl font-black">Selecciona la plataforma</h1>
