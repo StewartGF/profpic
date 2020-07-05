@@ -23,11 +23,6 @@ export const getTumblrUserData = async ({ commit }, payload) => {
   let response = await fetch(
     `https://cors-anywhere.herokuapp.com/https://api.tumblr.com/v2/blog/${payload}.tumblr.com/avatar/512`
   );
-  console.log(
-    "%c--------  response",
-    "background: #41B883; color: white; font-size:14px"
-  );
-  console.log(response.status);
   if (response.status == 404) {
     commit("SET_TUMBLR_USER_DATA", { exists: false });
     commit("SET_LOADING", false);
