@@ -30,7 +30,7 @@
             <div
               class="w-9/12 m-auto mt-12 rounded overflow-hidden shadow-xl bg-gray-900 border-solid border-4 border-gray-light-600 hover:border-pink-500"
             >
-              <img src="..\assets\ig_image.png" />
+              <img src="https://parentesis.com/imagesPosts/IG-glyph_001.png" />
               <div>
                 <h1 class="font-black text-lg p-3">instagram</h1>
               </div>
@@ -40,7 +40,9 @@
             <div
               class="w-9/12 m-auto mt-12 rounded overflow-hidden shadow-xl bg-gray-900 border-solid border-4 border-gray-light-600 hover:border-purple-500"
             >
-              <img src="..\assets\tumblr_image.jpg" />
+              <img
+                src="https://www.trecebits.com/wp-content/uploads/2018/11/Logo-Tumblr-fondo-azul.jpg"
+              />
               <h1 class="font-black text-lg p-3">tumblr</h1>
             </div>
           </router-link>
