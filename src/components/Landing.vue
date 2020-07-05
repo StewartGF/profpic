@@ -6,18 +6,18 @@
       <img
         width="30"
         height="30"
-        src="https://image.flaticon.com/icons/svg/2111/2111612.svg"
+        src="https://image.flaticon.com/icons/svg/52/52040.svg"
         style="filter: invert(100%);"
-        class="fixed top-0 left-0 m-5"
+        class="absolute top-0 left-0 m-3 rounded"
       />
     </a>
     <a href="https://www.linkedin.com/in/stewart-granger-flores/" target="_blank">
       <img
-        width="24"
-        height="24"
-        src="https://image.flaticon.com/icons/svg/1384/1384088.svg"
+        width="30"
+        height="30"
+        src="https://image.flaticon.com/icons/png/512/2931/2931621.png"
         style="filter: invert(100%);"
-        class="fixed top-0 right-0 m-6"
+        class="absolute top-0 right-0 m-3 rounded"
       />
     </a>
     <h1 class="text-center mt-8 text-5xl font-black">Selecciona la plataforma</h1>
@@ -30,7 +30,7 @@
             <div
               class="w-9/12 m-auto mt-12 rounded overflow-hidden shadow-xl bg-gray-900 border-solid border-4 border-gray-light-600 hover:border-pink-500"
             >
-              <img src="https://parentesis.com/imagesPosts/IG-glyph_001.png" />
+              <img src="..\assets\ig_image.png" />
               <div>
                 <h1 class="font-black text-lg p-3">instagram</h1>
               </div>
@@ -40,9 +40,7 @@
             <div
               class="w-9/12 m-auto mt-12 rounded overflow-hidden shadow-xl bg-gray-900 border-solid border-4 border-gray-light-600 hover:border-purple-500"
             >
-              <img
-                src="https://www.trecebits.com/wp-content/uploads/2018/11/Logo-Tumblr-fondo-azul.jpg"
-              />
+              <img src="..\assets\tumblr_image.jpg" />
               <h1 class="font-black text-lg p-3">tumblr</h1>
             </div>
           </router-link>

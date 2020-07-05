@@ -1,16 +1,35 @@
 <template>
   <div
-    class="container relative mx-auto text-center h-screen align-middle px-8 pb-8 pt-4 text-white"
+    class="container relative mx-auto w-full text-center h-screen align-middle px-8 pb-8 pt-12 text-white"
   >
     <router-link
       to="/"
-      class="shadow bg-blue-500 py-1 m-2 px-2 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold rounded-full top-0 left-0 absolute"
+      class="bg-transparent hover:bg-transparent text-white font-black hover:text-blue-500 py-2 px-4 border border-white hover:border-blue-500 rounded m-2 top-0 left-0 absolute"
     >Inicio</router-link>
+
+    <a href="https://github.com/StewartGF" target="_blank">
+      <img
+        width="30"
+        height="30"
+        src="https://image.flaticon.com/icons/svg/52/52040.svg"
+        style="filter: invert(100%);"
+        class="absolute top-0 right-0 mr-12 m-3 rounded"
+      />
+    </a>
+    <a href="https://www.linkedin.com/in/stewart-granger-flores/" target="_blank">
+      <img
+        width="30"
+        height="30"
+        src="https://image.flaticon.com/icons/png/512/2931/2931621.png"
+        style="filter: invert(100%);"
+        class="absolute top-0 right-0 m-3 rounded"
+      />
+    </a>
 
     <h1 class="text-5xl font-black">Instagram</h1>
     <div class="flex items-center justify-between my-8">
       <input
-        class="appearance-none rounded-full w-full py-5 px-4 mx-1 block w-3/4 bg-blue-900 bg-opacity-50 text-white-900 focus:outline-none focus:shadow-outline"
+        class="appearance-none rounded-full border-gray-500 border w-full py-5 px-4 mx-1 block w-3/4 bg-blue-900 bg-opacity-50 text-white-900 focus:border-transparent focus:outline-none focus:shadow-outline"
         id="username"
         type="search"
         placeholder="Nombre de usuario"
@@ -39,7 +58,7 @@
             />
             <div class="container sm:text-center lg:text-left">
               <p
-                class="text-blue-600 text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl"
+                class="text-blue-600 text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl"
               >{{instagramUserData.user.username}}</p>
               <p
                 class="text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg"
@@ -47,11 +66,18 @@
               <p
                 class="text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg"
               >{{instagramUserData.user.biography}}</p>
+
               <button
-                class="shadow bg-blue-500 rounded-full py-5 mt-5 w-2/4 sm:w-2/4 md:w-2/4 lg:w-2/4 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold"
-                type="button"
+                class="bg-blue-500 py-5 mt-5 hover:bg-blue-600 text-white font-bold px-10 rounded-full inline-flex items-center"
                 @click="clickAtag"
               >
+                <svg
+                  class="fill-current w-4 h-4 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                </svg>
                 <a
                   name="download"
                   :href="instagramUserData.user.profile_pic_url_hd"
@@ -73,7 +99,7 @@
       </div>
       <div v-else>
         <div class="container">
-          <p class="text-3xl">hey🧐</p>
+          <p class="text-3xl">hey {{randomEmoji}}</p>
         </div>
       </div>
     </div>
@@ -88,11 +114,36 @@ export default {
   data: function() {
     return {
       infoFlag: false,
-      username: ""
+      username: "",
+      emojis: [
+        "🥰",
+        "😎",
+        "🧐",
+        "🤔",
+        "🤐",
+        "🔥",
+        "😏",
+        "😁",
+        "😌",
+        "✌",
+        "🤩",
+        "🤗",
+        "🙂",
+        "😲",
+        "😳",
+        "🤭",
+        "🤓",
+        "👾",
+        "🙊",
+        "👀"
+      ]
     };
   },
   computed: {
-    ...mapState(["instagramUserData", "isLoading", "doesNotExists"]) // esto es más rapido que crear una función que devuelva el state en un return, don't know why tho🤷‍♂️
+    ...mapState(["instagramUserData", "isLoading", "doesNotExists"]), // esto es más rapido que crear una función que devuelva el state en un return, don't know why tho🤷‍♂️
+    randomEmoji: function() {
+      return this.emojis[Math.floor(Math.random() * this.emojis.length)];
+    }
   },
   components: {
     LoadingSpinner
