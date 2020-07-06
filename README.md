@@ -46,3 +46,19 @@ Hice este proyecto para poder conseguir iconos desde las plataformas que más us
 ✅ Crear Tumblr state y vista
 
 ✅ Deploy en Netlify :D
+
+## Actualización Julio, 2020 🧐
+
+Se corrigió el error de CORS usando un proxy en Heroku -> https://stewartgf-cors-anywhere.herokuapp.com/ 🤓
+
+- créditos @https://github.com/Rob--W/cors-anywhere/ 👈🔥
+
+* Pasos:
+
+```
+git clone https://github.com/Rob--W/cors-anywhere.git
+cd cors-anywhere/
+npm install
+heroku create
+git push heroku master
+```
