@@ -21,7 +21,7 @@ export const getTumblrUserData = async ({ commit }, payload) => {
   //seteo el loading
   commit("SET_LOADING", true);
   let response = await fetch(
-    `https://cors-anywhere.herokuapp.com/https://api.tumblr.com/v2/blog/${payload}.tumblr.com/avatar/512`
+    `https://stewartgf-cors-anywhere.herokuapp.com/https://api.tumblr.com/v2/blog/${payload}.tumblr.com/avatar/512`
   );
   if (response.status == 404) {
     commit("SET_TUMBLR_USER_DATA", { exists: false });
